@@ -25,12 +25,15 @@ function sortTableByColumn(table, column, asc = true){
         tBody.removeChild(tBody.firstChild);
     }
 
+    console.log("sortTableByColumn")
+
     //Re-add the newly shorted rows
     tBody.append(...sortedRows);
 
     // Remember how the column is currently sorted
 
-    table.querySelector("th").forEach( th => th.classList.remove("th-sort-asc", "th-sort-desc"));
+
+    table.querySelector("table-sortable th").forEach( th => th.classList.remove("th-sort-asc", "th-sort-desc"));
     table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-asc", asc);
     table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-desc", !asc);
 

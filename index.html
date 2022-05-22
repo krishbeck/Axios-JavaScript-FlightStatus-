@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vanilla Axios</title>
+  <link rel="stylesheet" href="sort.css">
   <style>
     body {
       background-color: #673AB7;
@@ -50,12 +51,34 @@
       color: white;
     }
 
+    .table-sortable th{
+      cursor : pointer;
+    }
+
+    .table-sortable .th-sort-asc::after{
+      content: "\25b2";
+    }
+
+    .table-sortable .th-sort-desc::after{
+      content: "\25bc";
+    }
+
+    .table-sortable .th-sort-asc::after,
+    .table-sortable .th-sort-desc::after{
+      margin-left: 5px;
+    }
+
+    .table-sortable .th-sort-asc,
+    .table-sortable .th-sort-desc{
+      background: rgba(0,0,0,0.1);
+    }
+
   </style>
 </head>
 <body>
 <div>
   <h1>Flights Status</h1>
-  <table class="flight-list">
+  <table class="flight-list table-sortable">
     <thead id ="flight-col">
     <tr>
       <th>Airlines</th>
@@ -72,5 +95,6 @@
   </table>
 </div>
 <script src="app.js"></script>
+<script src="sort.js"></script>
 </body>
 </html>
