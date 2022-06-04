@@ -10,13 +10,13 @@ function searchFlight() {
     // grab 'flight-list' table and check all column values
     var table = document.getElementById("flight-list");
     for(var i = 1, row; row = table.rows[i]; i++){      // starting from row 1, skipping header
-        row.style.display = "none";                     // hide TODO :: write in css
+        row.className = "hidden-row";                     // hide TODO :: write in css
         for (var j = 0, col; col = row.cells[j]; j++){  // iterating over each column
             if(col){
                 colUpperCase = col.innerHTML.toUpperCase(); // column value uppercase
                 var isPartialMatching = colUpperCase.indexOf(inputUpperCase) > -1;  // check for matching, and set style
                 if(isPartialMatching){
-                    row.style.display = "";             // TODO write in css
+                    row.className = "visible-row"
                     break;                              // break if found
                 }
             }
