@@ -77,8 +77,8 @@
 <body>
 <div>
   <h1>Flights Status</h1>
-  <input type="text" id="search" onkeyup="mySearch()" placeholder="Search for flights.." title="Type in flights">
-  <table class="flight-list table-sortable">
+  <input type="text" id="searchbar" name="search" placeholder="Search flights..">
+  <table class="flight-list table-sortable" id="flight-list">
     <thead id ="flight-col">
     <tr>
       <th>Airlines</th>
@@ -96,5 +96,6 @@
 </div>
 <script src="app.js"></script>
 <script src="sort.js"></script>
+<script src="searchbar.js"></script>
 </body>
 </html>
