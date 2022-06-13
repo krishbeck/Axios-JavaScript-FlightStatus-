@@ -1,0 +1,7 @@
+.table-sortable .hidden-row {
+    display: none;
+}
+
+.table-sortable .visible-row {
+    /*display: 'table-row';*/
+}

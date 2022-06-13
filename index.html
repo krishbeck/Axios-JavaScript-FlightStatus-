@@ -5,81 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vanilla Axios</title>
+  <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="sort.css">
+  <link rel="stylesheet" href="searchbar.css">
   <style>
-    body {
-      background-color: #673AB7;
-      color: white;
-    }
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    li {
-      margin-bottom: .5em;
-      margin-top: .5em;
-      padding: 1em;
-      border: 1px solid white;
-      transition-property: background-color, color;
-      transition-duration: 500ms;
-      transition-timing-function: ease-in-out;
-    }
-    li:hover {
-      background-color: white;
-      color: black;
-    }
-    table {
-      font-family: Arial, Helvetica, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    td, th {
-      border: 1px solid #ddd;
-      padding: 8px;
-    }
-
-
-    tr:hover {background-color: hsl(89, 43%, 51%);}
-
-    th {
-      padding-top: 12px;
-      padding-bottom: 12px;
-      text-align: left;
-      background-color: #04AA6D;
-      color: white;
-    }
-
-    .table-sortable th{
-      cursor : pointer;
-    }
-
-    .table-sortable .th-sort-asc::after{
-      content: "\25B4";
-    }
-
-    .table-sortable .th-sort-desc::after{
-      content: "\25BE";
-    }
-
-    .table-sortable .th-sort-asc::after,
-    .table-sortable .th-sort-desc::after{
-      margin-left: 5px;
-    }
-
-    .table-sortable .th-sort-asc,
-    .table-sortable .th-sort-desc {
-      background: rgba(0,0,0,0.1);
-    }
-
-    .table-sortable .hidden-row {
-      display: none;
-    }
-
-    .table-sortable .visible-row {
-      /*display: 'table-row';*/
-    }
   </style>
 </head>
 <body>
